@@ -56,4 +56,4 @@ Image decrypted and saved as path/to/save/decrypted_image.jpg
 
 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the  GNU GENERAL PUBLIC LICENSE- see the LICENSE file for details.
