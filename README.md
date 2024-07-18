@@ -21,7 +21,7 @@ Usage
 
     bash
 
-git clone https://github.com/yourusername/image-encryption-tool.git
+git clone https://github.com/Ajmal-Asharaf0/image-encryption-tool.git
 cd image-encryption-tool
 
 Install dependencies:
