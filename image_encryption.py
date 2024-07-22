@@ -3,22 +3,18 @@ import numpy as np
 
 def encrypt_image(image_path, output_path):
     try:
-        # Open the image file
+        
         img = Image.open(image_path)
-        # Convert image to RGB mode if it's not
         img = img.convert('RGB')
 
-        # Get image data as a numpy array
+        
         img_array = np.array(img)
 
-        # Perform encryption operation on pixel values
-        # Example: Swapping red and blue channels
+    
         encrypted_img_array = img_array[:, :, [2, 1, 0]]
 
-        # Create a new image from the encrypted numpy array
         encrypted_img = Image.fromarray(encrypted_img_array)
 
-        # Save encrypted image
         encrypted_img.save(output_path)
         print(f"Image encrypted and saved as {output_path}")
     except IOError:
@@ -29,20 +25,16 @@ def decrypt_image(encrypted_path, output_path):
         # Open the encrypted image file
         encrypted_img = Image.open(encrypted_path)
 
-        # Convert image to RGB mode if it's not
         encrypted_img = encrypted_img.convert('RGB')
 
-        # Get image data as a numpy array
+    
         encrypted_img_array = np.array(encrypted_img)
 
-        # Perform decryption operation (reverse of encryption)
-        # Example: Swapping back red and blue channels
+        
         decrypted_img_array = encrypted_img_array[:, :, [2, 1, 0]]
 
-        # Create a new image from the decrypted numpy array
         decrypted_img = Image.fromarray(decrypted_img_array)
 
-        # Save decrypted image
         decrypted_img.save(output_path)
         print(f"Image decrypted and saved as {output_path}")
     except IOError:
